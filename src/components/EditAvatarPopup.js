@@ -18,7 +18,7 @@ function EditAvatarPopup(props) {
       id="form-avatar"
       title="Обновить аватар"
       button="Сохранить"
-      name="card"
+      name="popup__card"
     >
       <input
         name="avatar"

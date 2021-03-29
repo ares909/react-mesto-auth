@@ -29,6 +29,13 @@
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/popup/popup.css);
 @import url(./blocks/popup/__form/popup__form.css);
+@import url(./blocks/register/register.css);
+@import url(./blocks/register/__form/register__form.css);
+@import url(./blocks/register/__form-container/register__form-container.css);
+@import url(./blocks/register/__form-heading/register__form-heading.css);
+@import url(./blocks/register/__form-text/register__form-text.css);
+@import url(./blocks/register/__form-button/register__form-button.css);
+@import url(./blocks/register/__form-login-button/register__form-login-button.css);
 @import url(./blocks/popup/__cross/popup__cross.css);
 @import url(./blocks/popup/__cross/_right/popup__cross_right.css);
 @import url(./blocks/popup/__container/popup__container.css);

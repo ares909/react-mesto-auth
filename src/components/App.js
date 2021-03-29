@@ -6,8 +6,12 @@ import ImagePopup from "./ImagePopup";
 import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import AddPlacePopup from "./AddPlacePopup";
+import Register from "./Register";
+import Login from "./Login"
+
 import { useState, useEffect } from "react";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import api from "../utils/api.js";
 
 function App() {
@@ -45,7 +49,7 @@ function App() {
 
   const closeByClickOnOverlay = (evt) => {
     if (evt.target.classList.contains("popup")) {
-      closeAllPopups()
+      closeAllPopups();
     }
   };
   const handleUserInfo = () => {
@@ -74,10 +78,10 @@ function App() {
     handleUserInfo();
     getInitialCards();
     document.addEventListener("keydown", handleEscClose);
-    document.addEventListener("click", closeByClickOnOverlay)
+    document.addEventListener("click", closeByClickOnOverlay);
     return () => {
       document.removeEventListener("keydown", handleEscClose);
-      document.removeEventListener("click", closeByClickOnOverlay)
+      document.removeEventListener("click", closeByClickOnOverlay);
     };
   }, []);
 
@@ -157,7 +161,7 @@ function App() {
     <>
       <CurrentUserContext.Provider value={currentUser}>
         <Header />
-
+        
         <EditProfilePopup
           isOpen={isEditProfilePopupOpen}
           onClose={closeAllPopups}
@@ -180,6 +184,15 @@ function App() {
           onUpdateAvatar={handleUpdateAvatar}
         ></EditAvatarPopup>
         <ImagePopup onClose={closeAllPopups} card={selectedCard} />
+        <Route path="/sign-up">
+        <Register/>
+        </Route>
+        <Route path="/sign-in">
+        <Login/>
+        </Route>
+        <Switch>
+        <Route exact path="/">
+          
         <Main
           onEditProfile={handleEditProfileClick}
           onAddPlace={handleAddPlaceClick}
@@ -188,8 +201,13 @@ function App() {
           cards={cards}
           onCardLike={handleCardLike}
           onCardDelete={handleCardDelete}
-        ></Main>
+        >
+          
+        </Main>
         <Footer />
+        </Route>
+        
+        </Switch>
       </CurrentUserContext.Provider>
     </>
   );

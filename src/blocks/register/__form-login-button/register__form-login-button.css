@@ -1,0 +1,9 @@
+.register__form-login-button {
+    padding: 0;
+    margin:0;   
+    border: none;
+    color: white ;
+    background-color: black;
+    outline: none;
+    cursor: pointer;
+}

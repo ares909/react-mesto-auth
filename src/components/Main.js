@@ -19,6 +19,7 @@ function Main(props) {
 
   return (
     <main>
+      
       <section className="profile">
         <div className="profile__container">
           <div

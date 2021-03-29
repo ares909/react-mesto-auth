@@ -29,7 +29,7 @@ function AddPlacePopup(props) {
       onSubmit={handleSubmit}
       id="form-place"
       title="Новое место"
-      name="card"
+      name="popup__card"
       button="Создать"
     >
       <input
