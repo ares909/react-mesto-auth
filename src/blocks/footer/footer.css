@@ -1,0 +1,25 @@
+.footer {
+  min-width: 880px;
+  margin: 67px auto 60px 15.625%;
+  color: #545454;
+}
+
+@media screen and (max-width:320px) {
+  .footer {
+    margin: 36px auto 48px;
+    min-width: 282px;
+  }
+}
+
+@media screen and (min-width:321px) and (max-width: 1279px) {
+  .footer {
+    min-width: 95%;
+    margin: 36px auto 48px;
+  }
+}
+
+@media screen and (min-width:1281px) {
+  .footer {
+    margin: 67px auto 60px;
+  }
+}

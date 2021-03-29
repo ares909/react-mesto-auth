@@ -1,0 +1,6 @@
+.profile__avatar-button_focused {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s ease;
+}

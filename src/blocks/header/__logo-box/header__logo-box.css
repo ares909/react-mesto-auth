@@ -1,0 +1,15 @@
+.header__logo-box {
+  width: 142px;
+  height: 33px;
+  display: block;
+  margin-bottom: 41px;
+}
+
+@media screen and (min-width:320px) and (max-width: 551px) {
+  .header__logo-box {
+    width: 104px;
+    height: 24px;
+    padding-left: 8%;
+    margin-bottom: 32px;
+  }
+}

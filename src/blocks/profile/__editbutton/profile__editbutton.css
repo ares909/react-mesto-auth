@@ -1,0 +1,27 @@
+.profile__editbutton {
+  background-image: url(./images/editbutton.svg);
+  width: 24px;
+  height: 24px;
+  margin-bottom: 10px;
+  background-size: contain;
+  display: block;
+  box-sizing: border-box;
+  grid-area: editbutton;
+  align-self: end;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+}
+
+@media screen and (min-width:320px) and (max-width: 551px) {
+  .profile__editbutton {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 12%;
+    right: 40%;
+    margin: 0;
+  }
+}

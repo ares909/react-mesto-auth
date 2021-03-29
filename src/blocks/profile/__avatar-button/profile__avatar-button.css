@@ -1,0 +1,33 @@
+.profile__avatar-button {
+  background-image: url(./image/avatar-button.svg);
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  left: 37%;
+  top: 40%;
+  background-size: contain;
+  display: block;
+  box-sizing: border-box;
+  grid-area: editbutton;
+  align-self: end;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+
+}
+
+@media screen and (min-width:320px) and (max-width: 551px) {
+  .profile__editbutton {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 12%;
+    right: 40%;
+    margin: 0;
+  }
+}

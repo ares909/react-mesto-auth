@@ -1,0 +1,14 @@
+.popup__form-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 13px;
+  color: black;
+  outline: none;
+}
+
+.popup__form-text:last-of-type {
+  margin-bottom: 0;
+}

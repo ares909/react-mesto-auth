@@ -1,0 +1,8 @@
+@media screen and (min-width:320px) and (max-width: 551px) {
+  .popup__card-button {
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 6px;
+    padding: 12px 14px;
+  }
+}

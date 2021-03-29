@@ -1,0 +1,42 @@
+.popup__card-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 13px;
+  color: black;
+  outline: none;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  color: #C4C4C4;
+  padding: 0;
+}
+
+input[type="text"]::-moz-placeholder {
+  color: #C4C4C4;
+  padding: 0;
+}
+
+input[type="url"]::-webkit-input-placeholder {
+  color: #C4C4C4;
+  padding: 0;
+}
+
+input[type="url"]::-moz-placeholder {
+  color: #C4C4C4;
+  padding: 0;
+}
+
+.popup__card-text:last-of-type {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width:320px) and (max-width: 551px) {
+  .popup__card-text {
+    font-size: 12px;
+    line-height: 15px;
+    padding-bottom: 9px;
+  }
+}

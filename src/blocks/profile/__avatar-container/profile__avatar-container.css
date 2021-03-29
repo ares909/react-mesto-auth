@@ -1,0 +1,19 @@
+.profile__avatar-container {
+  position: relative;
+}
+.profile__avatar-container:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  opacity: 0.3;
+  transition: opacity 0.1s ease 0s;
+}
+
+.profile__avatar-container:hover:before {
+  opacity: 0.8;
+}
