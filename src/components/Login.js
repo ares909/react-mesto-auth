@@ -13,7 +13,7 @@ function Login(props) {
         
       }
     return (
-        <section className="register">
+        <form className="register">
         <FieldSet
           isOpen={true}
           onClose={props.onClose}
@@ -45,7 +45,7 @@ function Login(props) {
           <span className="popup__error"></span>
         </FieldSet>
         
-        </section>
+        </form>
         
       );
 

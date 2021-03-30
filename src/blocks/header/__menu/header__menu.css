@@ -1,0 +1,6 @@
+.header__menu {
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    line-height: 22px;
+}
