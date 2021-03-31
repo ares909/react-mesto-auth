@@ -3,4 +3,14 @@
     flex-direction: row;
     font-size: 18px;
     line-height: 22px;
+    font-weight: normal;
+}
+
+@media screen and (min-width:320px) and (max-width: 551px) {
+    .header__menu {
+        padding-right: 8%;
+        font-size: 14px;
+        line-height: 17px;
+
+    }
 }

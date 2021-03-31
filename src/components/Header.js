@@ -9,7 +9,11 @@ function Header(props) {
       <a href="#" className="header__logo-box hover" target="_blank">
         <img className="header__logo" src={logo} alt="лого" />
       </a>
-      <NavBar signIn={props.signIn} onChangeForm={props.onChangeForm}></NavBar>
+      <NavBar
+        loggedIn={props.loggedIn}
+        email={props.email}
+        onLogOut={props.onLogOut}
+      ></NavBar>
     </header>
   );
 }

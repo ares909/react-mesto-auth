@@ -17,7 +17,7 @@ export const register = (email, password) => {
     .catch((err) => console.log(err));
 };
 
-export const authorization = (email, password) => {
+export const authorize = (email, password) => {
   return fetch(`${BASE_URL}signin`, {
     method: "POST",
     headers: {
@@ -26,28 +26,34 @@ export const authorization = (email, password) => {
     body: JSON.stringify({ email, password }),
   })
     .then((response) => {
-      try {
-        if (response.status === 200) {
-          return response.json();
-        }
-      } catch (e) {
-        return e;
+      return response.json();
+    })
+    .then((res) => {
+      if (res) {
+        localStorage.setItem("token", res.token);
+        return res;
       }
     })
-    .then((res) =>
-      res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`)
-    )
     .catch((err) => console.log(err));
 };
 
-// export const identification = (email) => {
-//   return fetch(`${BASE_URL}users/me`, {
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//   })
-//     .then((res) =>
-//       res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`)
-//     )
-//     .catch((err) => console.log(err));
-// };
+
+
+
+export const tokenCheck = (token) => {
+  return fetch(`${BASE_URL}users/me`, {
+    method: 'GET',
+    headers: {
+      authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+  })
+  .then((response) => {
+    return response.json();
+  })
+  .then((res) => {
+    return res;
+  })
+  .catch((err) => console.log(err));
+};
+

@@ -12,5 +12,5 @@
   font-family: 'Inter', sans-serif;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 1s ease, visibility 0s ease 1s;
+  transition: opacity ease, visibility 0s ease 1s;
 }
