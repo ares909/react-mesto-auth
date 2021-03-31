@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
 
 function FieldSet(props) {
   if (props.submitted) {
@@ -18,11 +17,7 @@ function FieldSet(props) {
   } else {
     return (
       <>
-        <fieldset
-          className={`${props.name}-container`}
-
-          // id="form_name_container"
-        >
+        <fieldset className={`${props.name}-container`}>
           <h2 className={`${props.name}-heading`}>{props.title}</h2>
           {props.children}
 

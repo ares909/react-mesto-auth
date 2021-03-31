@@ -9,7 +9,6 @@ function InfoTooltip(props) {
         isOpen={props.isOpen}
         onClose={props.onClose}
         submitted={props.submitted}
-        // failed={props.failed}
         name="popup__form"
       >
         <img src={failImage} className="popup__infotool-image" alt="успех" />

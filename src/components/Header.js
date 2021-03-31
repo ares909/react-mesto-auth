@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../blocks/header/images/logo.svg";
-import { Link, withRouter } from "react-router-dom";
 import NavBar from "./NavBar";
 
 function Header(props) {

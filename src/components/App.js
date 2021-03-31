@@ -15,10 +15,8 @@ import { useState, useEffect } from "react";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import SettingsMobile from "./SettingsMobile";
 import {
-  BrowserRouter,
   Route,
   Switch,
-  Redirect,
   useHistory,
 } from "react-router-dom";
 import api from "../utils/api.js";

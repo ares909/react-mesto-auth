@@ -1,7 +1,5 @@
-import { useEffect, useState, useContext } from "react";
-import PopupWithForm from "./PopupWithForm";
-import { CurrentUserContext } from "../contexts/CurrentUserContext";
-import { Link, withRouter, useHistory } from "react-router-dom";
+import { useState } from "react";
+import { withRouter, useHistory } from "react-router-dom";
 import FieldSet from "./FieldSet";
 import * as auth from "../auth.js";
 
@@ -26,7 +24,6 @@ function Login(props) {
   return (
     <form className="register" onSubmit={handleSubmit}>
       <FieldSet
-        // isOpen={true}
         onClose={props.onClose}
         onSubmit={handleSubmit}
         id="form-register"

@@ -9,7 +9,6 @@ function Register(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // props.onChangeForm();
     auth.register(values.email, values.password).then((res) => {
       if (res.data) {
         history.push("/signin");
