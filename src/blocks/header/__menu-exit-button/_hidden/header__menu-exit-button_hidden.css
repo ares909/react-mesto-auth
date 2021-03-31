@@ -1,9 +1,5 @@
-.header__menu-item_bold {
-    font-weight: 500;
-}
-
 @media screen and (min-width:320px) and (max-width: 551px) {
-    .header__menu-item_bold {
+    .header__menu_exit-button_hidden{
         display: none;
     }
 }

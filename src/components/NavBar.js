@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import settingsButton from "../blocks/header/__menu-settings/images/header_settings.svg"
 
 function NavBar(props) {
   const location = useLocation();
@@ -40,13 +41,14 @@ function NavBar(props) {
       {location.pathname === "/" ? (
         <button
           onClick={props.onLogOut}
-          className="header__menu_exit-button hover"
+          className="header__menu_exit-button header__menu_exit-button_hidden hover"
         >
           Выйти
         </button>
       ) : (
         ""
       )}
+      {location.pathname === "/" ? (<img onClick={props.onSettings} src={settingsButton} className="header__menu-settings hover"/>) : ''}
     </nav>
   );
 

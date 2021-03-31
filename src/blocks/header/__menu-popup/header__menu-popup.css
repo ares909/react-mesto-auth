@@ -1,0 +1,15 @@
+.header__menu-popup {
+    display: none;
+}
+
+@media screen and (min-width:320px) and (max-width: 551px) {
+    .header__menu-popup {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 40px 0 0;
+        border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+    }
+}

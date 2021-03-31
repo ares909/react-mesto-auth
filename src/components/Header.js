@@ -13,6 +13,7 @@ function Header(props) {
         loggedIn={props.loggedIn}
         email={props.email}
         onLogOut={props.onLogOut}
+        onSettings={props.onSettings}
       ></NavBar>
     </header>
   );

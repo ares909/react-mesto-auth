@@ -1,0 +1,10 @@
+.header__menu-popup_opened {
+    display: none;
+}
+
+@media screen and (min-width:320px) and (max-width: 551px) {
+    .header__menu-popup_opened {
+        display: flex;
+
+    }
+}

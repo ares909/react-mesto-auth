@@ -1,6 +1,4 @@
-import { useEffect, useState, useContext } from "react";
-import PopupWithForm from "./PopupWithForm";
-import { CurrentUserContext } from "../contexts/CurrentUserContext";
+import { useState } from "react";
 import { Link, withRouter, useHistory } from "react-router-dom";
 import FieldSet from "./FieldSet";
 import * as auth from "../auth.js";
@@ -12,17 +10,14 @@ function Register(props) {
   function handleSubmit(e) {
     e.preventDefault();
     // props.onChangeForm();
-    auth
-      .register(values.email, values.password)
-      .then((res) => {
-        if (res.data) {
-          history.push("/signin");
-        }
-        else if (res.message) {
-          props.onFail()
-        }
-      })
-      .finally(props.onRegister());
+    auth.register(values.email, values.password).then((res) => {
+      if (res.data) {
+        history.push("/signin");
+        props.onRegister();
+      } else if (res.message || res.error) {
+        props.onFail();
+      }
+    });
   }
 
   function handleChange(e) {
@@ -30,18 +25,13 @@ function Register(props) {
     setValues({ ...values, [name]: value });
   }
   return (
-    <form className="register" onSubmit={handleSubmit} noValidate> 
+    <form className="register" onSubmit={handleSubmit} noValidate>
       <FieldSet
-        
-        // isOpen={true}
-        // onClose={props.onClose}
-        // onSubmit={handleSubmit}
         id="form-register"
         title="Регистрация"
         name="register__form"
         button="Зарегистрироваться"
       >
-        {/* <h2 className={`register__form-heading`}>Регистрация</h2> */}
         <input
           name="email"
           placeholder="Email"

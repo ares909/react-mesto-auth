@@ -1,0 +1,14 @@
+.header__menu-settings {
+    display: none;
+}
+
+@media screen and (min-width:320px) and (max-width: 551px) {
+    .header__menu-settings {
+        display: inherit;
+        margin-bottom: 31px;
+        width: 18px;
+        height: 24px;
+        cursor: pointer;
+        outline: none;
+    }
+}

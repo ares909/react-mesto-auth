@@ -13,6 +13,7 @@ import InfoTooltip from "./InfoTooltip";
 import * as auth from "../auth.js";
 import { useState, useEffect } from "react";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
+import SettingsMobile from "./SettingsMobile";
 import {
   BrowserRouter,
   Route,
@@ -33,6 +34,7 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [fail, setFail] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   const history = useHistory();
   const [email, setEmail] = useState("");
@@ -52,6 +54,9 @@ function App() {
   };
   const handleCardClick = (card) => {
     setSelectedCard(card);
+  };
+  const handleSettingsClick = () => {
+    setIsSettingsOpen(!isSettingsOpen);
   };
   const closeAllPopups = () => {
     setIsEditProfilePopupOpen(false);
@@ -181,7 +186,7 @@ function App() {
   }
 
   function handleLogin() {
-    setLoggedIn(!loggedIn);
+    // setLoggedIn(!loggedIn);
     handleTokenCheck();
   }
 
@@ -216,7 +221,18 @@ function App() {
   return (
     <>
       <CurrentUserContext.Provider value={currentUser}>
-        <Header loggedIn={loggedIn} email={email} onLogOut={handleLogOut} />
+        <SettingsMobile
+          isOpen={isSettingsOpen}
+          onClose={closeAllPopups}
+          email={email}
+          onLogOut={handleLogOut}
+        ></SettingsMobile>
+        <Header
+          loggedIn={loggedIn}
+          email={email}
+          onLogOut={handleLogOut}
+          onSettings={handleSettingsClick}
+        />
 
         <EditProfilePopup
           isOpen={isEditProfilePopupOpen}
